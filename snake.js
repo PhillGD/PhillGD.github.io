@@ -164,18 +164,44 @@ window.onload = function() {
 		ctx. font = '16px arial';
 		
 		ctx.fillText('Your Score Was: ' + score, ((canvas.width / 2) - (ctx.measureText('Your Score Was: ' + score).width / 2)), 70);
-	
-		restart();
+		
+		ctx.fillStyle = 'black';
+		ctx. font = '10px arial';
+		
+		ctx.fillText('Press the Enter Key to Restart.', ((canvas.width / 2) - (ctx.measureText('Press the Enter Key to Restart.').width / 2)),90);
+		
+		window.addEventListener('keydown', function(g) {
+			if (g.keyCode === 13){
+				restart();
+			}
+		});
 	}
 	
 	function restart() {
 		if(active == false) {
-			var a = document.createElement('a');
-			var linkText = document.createTextNode("Restart");
-			a.appendChild(linkText);
-			a.title = "Restart";
-			a.href = "index.html";
-			document.body.appendChild(a);
+		
+		score = 0,
+		level = 1,
+		direction = 0,
+		active = true,
+		speed = 350;
+		
+		map = new Array(20);
+		for (var i = 0; i < map.length; i++) {
+			map[i] = new Array(20);
+		}
+		
+		map = generateSnake(map);
+		map = generateFood(map);
+		drawGame();
+		}
+	}
+	
+	function wait(ms){
+	   var start = new Date().getTime();
+	   var end = start;
+	   while(end < start + ms) {
+			end = new Date().getTime();
 		}
 	}
 };
