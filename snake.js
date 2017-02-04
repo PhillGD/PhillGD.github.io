@@ -24,16 +24,16 @@ window.onload = function() {
     drawGame();
 	
 	window.addEventListener('keydown', function(e) {
-		if (e.keyCode === 38 && (snake[0].y - 1) != snake[1].y) {
+		if (e.keyCode === 87 && (snake[0].y - 1) != snake[1].y) {
 			direction = 2;
 		}
-		else if (e.keyCode === 40 && (snake[0].y + 1) != snake[1].y) {
+		else if (e.keyCode === 83 && (snake[0].y + 1) != snake[1].y) {
 			direction = 3;
 		}
-		else if (e.keyCode === 37 && (snake[0].x - 1) != snake[1].x) {
+		else if (e.keyCode === 65 && (snake[0].x - 1) != snake[1].x) {
 			direction = 1;
 		}
-		else if (e.keyCode === 39 && (snake[0].x + 1) != snake[1].x) {
+		else if (e.keyCode === 68 && (snake[0].x + 1) != snake[1].x) {
 			direction = 0;
 		}
 	});
