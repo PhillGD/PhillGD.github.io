@@ -1,9 +1,0 @@
-{
-"TOTAL_MEMORY": 268435456,
-"dataUrl": "HoldoutWeb.data.unityweb",
-"asmCodeUrl": "HoldoutWeb.asm.code.unityweb",
-"asmMemoryUrl": "HoldoutWeb.asm.memory.unityweb",
-"asmFrameworkUrl": "HoldoutWeb.asm.framework.unityweb",
-"splashScreenStyle": "Dark",
-"backgroundColor": "#222C36"
-}
